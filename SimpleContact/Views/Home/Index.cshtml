@@ -1,4 +1,5 @@
-﻿@{
+@model SimpleContact.Models.EmailRequest
+@{
     ViewData["Title"] = "Home Page - Contact";
 }
 
@@ -15,15 +16,15 @@
         <form asp-action="Index" method="post">
             <div class="form-group mb-2">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name">
+                <input type="text" class="form-control" id="name" asp-for="Name">
             </div>
             <div class="form-group mb-2">
                 <label for="email">Email</label>
-                <input type="text" class="form-control" id="email">
+                <input type="text" class="form-control" id="email" asp-for="Email">
             </div>
             <div class="form-group mb-2">
                 <label for="message">Mesage</label>
-                <textarea type="text" class="form-control" id="message"></textarea>
+                <textarea type="text" class="form-control" id="message" asp-for="Message"></textarea>
             </div>
             <div class="form-group mb-2">
                 <input type="submit" class="btn btn-primary" value="Send">
